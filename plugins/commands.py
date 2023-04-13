@@ -38,7 +38,7 @@ async def start(client, message):
         await client.send_message(LOG_CHANNEL, script.LOG_TEXT_P.format(message.from_user.id, message.from_user.mention, message.from_user.username, temp.U_NAME))
     if len(message.command) != 2:
         buttons = [
-            [InlineKeyboardButton('⚡ᴄʟɪᴄᴋ ғᴏʀ ᴍᴏʀᴇ ʙᴜᴛᴛᴏɴs⚡', callback_data="start"]
+            [InlineKeyboardButton('⚡ᴄʟɪᴄᴋ ғᴏʀ ᴍᴏʀᴇ ʙᴜᴛᴛᴏɴs⚡', callback_data="start")]
         ]
         reply_markup = InlineKeyboardMarkup(buttons)
         await message.reply_chat_action(enums.ChatAction.TYPING)
