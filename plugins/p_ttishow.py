@@ -46,16 +46,19 @@ async def save_group(bot, message):
             reply_markup=reply_markup)
     else:
         for u in message.new_chat_members:
-            if (temp.MELCOW).get('welcome') is not None:
-                try:
-                    await (temp.MELCOW['welcome']).delete()
-                except:
-                    pass
-            if WELCOM_PIC:
-                temp.MELCOW['welcome'] = await message.reply_photo(photo=WELCOM_PIC, caption=WELCOM_TEXT.format(user=u.mention, chat=message.chat.title))
-            else:
-                temp.MELCOW['welcome'] = await message.reply_text(text=WELCOM_TEXT.format(user=u.mention, chat=message.chat.title))
 
+                if (temp.MELCOW).get('welcome') is not None:
+
+                    try:
+
+                        await (temp.MELCOW['welcome']).delete()
+
+                    except:
+
+                        pass
+
+                temp.MELCOW['welcome'] = await message.reply(f"<b>Hey , {u.mention}, Welcome to {message.chat.title}</b>")
+                                                             
 
 @Client.on_message(filters.command('leave') & filters.user(ADMINS))
 async def leave_a_chat(bot, message):
