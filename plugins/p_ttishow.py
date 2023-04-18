@@ -52,7 +52,8 @@ async def save_group(bot, message):
                 except:
                     pass
             if WELCOM_PIC:
-                temp.MELCOW['welcome'] = await message.reply_photo(photo=WELCOM_PIC, caption=WELCOM_TEXT.format(user=u.mention, chat=message.chat.title))
+                temp.MELCOW['welcome'] = await message.reply_photo(photo=WELCOM_PIC, caption=WELCOM_TEXT.format(user=u.mention, chat=message.chat.title,
+                                                                   reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("hi", callback_data="close_data")]])))
             else:
                 temp.MELCOW['welcome'] = await message.reply_text(text=WELCOM_TEXT.format(user=u.mention, chat=message.chat.title,
                                                                   reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("hi", callback_data="close_data")]])))
