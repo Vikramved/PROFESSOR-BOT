@@ -46,7 +46,7 @@ async def save_group(bot, message):
             reply_markup=reply_markup)
     else:
         for u in message.new_chat_members:
-                if (temp.MELCOW).get('welcome') is not None:
+            if (temp.MELCOW).get('welcome') is not None:
                 try:
                     await (temp.MELCOW['welcome']).delete()
                 except:
