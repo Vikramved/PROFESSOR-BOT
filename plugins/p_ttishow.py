@@ -52,7 +52,7 @@ async def save_group(bot, message):
                     except:
                         pass
                 temp.MELCOW['welcome'] = await message.reply(f"<b>Hey , {u.mention}, Welcome to {message.chat.title}</b>",
-                                                             reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("close", callback_data="close_data"),InlineKeyboardButton("close", callback_data="close_data"),InlineKeyboardButton("close", url="http://t.me/DrMasterTGbot?start=regole_-1001397638909"),InlineKeyboardButton("close", callback_data="close_data")]]))                                                  
+                                                             reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("close", callback_data="close_data"),InlineKeyboardButton("close", callback_data="close_data"),InlineKeyboardButton("close", url="http://t.me/DrMasterTGbot?start=regole_-1001397638909"),InlineKeyboardButton("close", callback_data="close_data")],[InlineKeyboardButton("ʀᴜʟᴇꜱ", url="http://t.me/DrMasterTGbot?start=regole_-1001397638909")]]))                                            
 
 @Client.on_message(filters.command('leave') & filters.user(ADMINS))
 async def leave_a_chat(bot, message):
